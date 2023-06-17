@@ -1,0 +1,120 @@
+body {
+    /* background-color: rgb(232, 230, 124); */
+    background-color: lightyellow;
+}
+.main-header{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title{
+    margin-top: 0px;
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-family: 'Cute Font', cursive;
+}
+
+.main-title-content{
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-family: fantasy;
+    font-size: 40px;
+    font-family: 'Cute Font', cursive;
+}
+
+.main-question-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+textarea{
+    margin-top: 20px;
+    width: 400px;
+    height: auto;
+    /* border: 3px solid rgb(244, 165, 208); */
+    background-color: rgb(255, 194, 203);
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Cute Font', cursive;
+    border-radius: 40px;
+
+}
+
+textarea::placeholder{
+    color: black;
+    width: auto;
+    height: auto;
+}
+
+.user-input-box{
+    margin-top: 40px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+.main-img{
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    margin: 2px 0;
+    border-radius: 50px;
+    padding: 30px;
+    background-color: pink;
+    /* transition: ease-in-out 0.4s; */
+    box-shadow: 20px 20px 20px #555;
+    transition: all ease 1s;
+}
+
+.main-img:hover{
+    transform: scale(1.1);
+    /* transition: ease-in-out 0.4s; */
+    transform: rotate( 20deg );
+}
+
+.main-img-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.button {
+    margin-top: 20px;
+    width: 60px;
+    height: 30px;
+}
+
+.main-explain{
+    text-align: center;
+}
+
+.explain{
+    margin: 0px;
+    font-size: 80px;
+    font-family: 'Nanum Pen Script', cursive;
+}
+
+.main-ai-response-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.ai-response{
+    width: auto;
+    height: auto;
+    text-align: center;
+    border:  5px solid lightpink;
+    border-radius: 20px;
+}
+
+.response{
+    margin-top: 30px;
+    font-size: 30px;
+    font-family: 'Nanum Pen Script', cursive;
+}
+

@@ -1,0 +1,5 @@
+<!-- table_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF"/> <!-- 배경색 -->
+    <stroke android:color="#B8B8B8" android:width="1dp"/> <!-- 외곽선 -->
+</shape>

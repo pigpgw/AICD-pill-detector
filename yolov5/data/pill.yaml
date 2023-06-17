@@ -1,0 +1,13 @@
+train: ./data/images/train/images
+val: ./data/images/valid/images
+test: ./data/images/test/images
+
+nc: 5
+names: ['tak-sen', 'Modcol S Soft Cap', 'Soxital Tab', 'nr', 'solufen']
+
+roboflow:
+  workspace: pill-detect
+  project: pills-data
+  version: 6
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/pill-detect/pills-data/dataset/6

@@ -1,0 +1,7 @@
+train : ./data/images/test/images
+val : ./data/images/valid/images
+# test :
+
+nc : 5
+
+names : ['Modcol S Soft Cap','Soxital Tab','nr','solufen','tak-sen']

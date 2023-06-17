@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 24
+names: ['34342', '37990', '39916', '40122', '40720', '40767', '40792', '40837', '40949', '40953', '40990', '40991', '41097', '41107', '41169', '41170', '41172', '41207', '41225', 'opiqutan', 'rabeparzole20', 't-muse', 'tovast10', 'welood']
+
+roboflow:
+  workspace: pill-detect
+  project: pills-nfhsm
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/pill-detect/pills-nfhsm/dataset/3
