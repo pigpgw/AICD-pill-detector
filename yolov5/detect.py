@@ -34,18 +34,16 @@ import glob
 import platform
 import sys
 from pathlib import Path
-# from google.colab.patches import cv2_imshow
-# import cv2
-# from google.colab.patches import cv2_imshow
+
 import torch
 from PIL import Image
 from IPython.display import display 
 
 
-# import firebase_admin
-# from firebase_admin import credentials, storage
-# from firebase_admin import db
-# from firebase_admin import storage
+import firebase_admin
+from firebase_admin import credentials, storage
+from firebase_admin import db
+from firebase_admin import storage
 
 FILE = Path(__file__).resolve()
 ROOT = FILE.parents[0]  # YOLOv5 root directory
@@ -289,30 +287,30 @@ def parse_opt():
     return opt
 
 
-# def save_firebase():
-#     cred = credentials.Certificate("realdb.json")
-#     firebase_admin.initialize_app(cred,{"databaseURL": "https://aicd-fd750-default-rtdb.firebaseio.com"})
+def save_firebase():
+    cred = credentials.Certificate("realdb.json")
+    firebase_admin.initialize_app(cred,{"databaseURL": "https://aicd-fd750-default-rtdb.firebaseio.com"})
 
-#     # .txt에서 detect된 라벨을 알약 번호로 출력 -> firebase에선 0~17까지 인덱스로 저장되있음 그걸 불러오기 위해서 dict사용
-#     pill_dict = {'Modcol':"0", 'Soxital':"1", 'nr':"2", 'solufen':"3", 'tak-sen':"4"}
+    # .txt에서 detect된 라벨을 알약 번호로 출력 -> firebase에선 0~17까지 인덱스로 저장되있음 그걸 불러오기 위해서 dict사용
+    pill_dict = {'Modcol':"0", 'Soxital':"1", 'nr':"2", 'solufen':"3", 'tak-sen':"4"}
 
-#     #데이터 읽기
-#     with open("/Users/baggeon-u/Desktop/ai캡디코드및자료/yolov5/save_detecting_label_folder/ex.txt", "r") as f:
-#         for line in f:
-#             result = line.strip()
+    #데이터 읽기
+    with open("/Users/baggeon-u/Desktop/ai캡디코드및자료/yolov5/save_detecting_label_folder/ex.txt", "r") as f:
+        for line in f:
+            result = line.strip()
 
-#     print(".txt 읽어오기",result)
+    print(".txt 읽어오기",result)
 
-#     # .txt에서 detecting된 값으로 firebase에서 불러와지는지 체크
-#     print("detect 값으로 fire base데이터 불러오기 위한 인덱스 변환",pill_dict[result])
+    # .txt에서 detecting된 값으로 firebase에서 불러와지는지 체크
+    print("detect 값으로 fire base데이터 불러오기 위한 인덱스 변환",pill_dict[result])
 
-#     #실시간 db에서 정보 가져오기 - 5/25
-#     pill_index = pill_dict[result]
+    #실시간 db에서 정보 가져오기 - 5/25
+    pill_index = pill_dict[result]
 
 
-#     # real time db에서 디텍트한 인덱스 라벨을 저장
-#     ref = db.reference()
-#     ref.update({'index':pill_index})
+    # real time db에서 디텍트한 인덱스 라벨을 저장
+    ref = db.reference()
+    ref.update({'index':pill_index})
 
 
 
