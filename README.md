@@ -4,4 +4,4 @@
 
 https://github.com/pigpgw/AICD-pill-detector/assets/133184988/5d5febd4-2810-4532-b3a1-0386429c8aa2
 
-excute_all.py 실행시 프로그램 구동
+excute_all_after_won.py 실행시 프로그램 구동
